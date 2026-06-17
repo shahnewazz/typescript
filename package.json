@@ -1,5 +1,26 @@
 {
+  "name": "typescript-mastery",
+  "version": "1.0.0",
+  "description": "A complete TypeScript learning repository — beginner to expert",
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "typecheck:watch": "tsc --noEmit --watch",
+    "build": "tsc",
+    "lint": "eslint . --ext .ts",
+    "format": "prettier --write \"**/*.ts\"",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "run:example": "tsx"
+  },
   "devDependencies": {
-    "typescript": "^5.9.3"
+    "@types/node": "^22.0.0",
+    "@typescript-eslint/eslint-plugin": "^8.0.0",
+    "@typescript-eslint/parser": "^8.0.0",
+    "eslint": "^9.0.0",
+    "prettier": "^3.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.9.3",
+    "vitest": "^2.0.0"
   }
 }

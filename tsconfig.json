@@ -1,44 +1,41 @@
 {
-  // Visit https://aka.ms/tsconfig to read more about this file
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "./tsconfig.base.json",
   "compilerOptions": {
-    // File Layout
-    // "rootDir": "./src",
-    // "outDir": "./dist",
-
-    // Environment Settings
-    // See also https://aka.ms/tsconfig/module
-    "module": "nodenext",
-    "target": "esnext",
-    "types": [],
-    // For nodejs:
-    // "lib": ["esnext"],
-    // "types": ["node"],
-    // and npm install -D @types/node
-
-    // Other Outputs
-    "sourceMap": true,
-    "declaration": true,
-    "declarationMap": true,
-
-    // Stricter Typechecking Options
-    "noUncheckedIndexedAccess": true,
-    "exactOptionalPropertyTypes": true,
-
-    // Style Options
-    // "noImplicitReturns": true,
-    // "noImplicitOverride": true,
-    // "noUnusedLocals": true,
-    // "noUnusedParameters": true,
-    // "noFallthroughCasesInSwitch": true,
-    // "noPropertyAccessFromIndexSignature": true,
-
-    // Recommended Options
-    "strict": true,
-    "jsx": "react-jsx",
-    "verbatimModuleSyntax": true,
-    "isolatedModules": true,
-    "noUncheckedSideEffectImports": true,
-    "moduleDetection": "force",
-    "skipLibCheck": true,
-  }
+    // Type-check the whole repo without emitting — each topic compiles independently
+    "noEmit": true,
+    "rootDir": "."
+  },
+  "include": [
+    "01-type-annotations/**/*.ts",
+    "02-everyday-types/**/*.ts",
+    "03-functions/**/*.ts",
+    "04-objects-and-interfaces/**/*.ts",
+    "05-union-types-and-narrowing/**/*.ts",
+    "06-generics/**/*.ts",
+    "07-classes/**/*.ts",
+    "08-modules/**/*.ts",
+    "09-enums/**/*.ts",
+    "10-utility-types/**/*.ts",
+    "11-mapped-types/**/*.ts",
+    "12-conditional-types/**/*.ts",
+    "13-template-literal-types/**/*.ts",
+    "14-decorators/**/*.ts",
+    "15-declaration-files/**/*.ts",
+    "16-advanced-type-patterns/**/*.ts",
+    "17-error-handling/**/*.ts",
+    "18-async-patterns/**/*.ts",
+    "19-design-patterns/**/*.ts",
+    "20-ecommerce-project/**/*.ts",
+    "21-auth-system/**/*.ts",
+    "22-rest-api/**/*.ts",
+    "23-cms-system/**/*.ts",
+    "24-saas-platform/**/*.ts",
+    "25-marketplace/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "**/*.js"
+  ]
 }
